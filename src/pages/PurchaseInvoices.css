@@ -1,0 +1,439 @@
+.purchase-invoices-page {
+  width: 100%;
+  direction: rtl;
+}
+
+.purchase-invoice-entry {
+  padding: 22px;
+  border: 1px solid #e5d8ca;
+  border-radius: 20px;
+  background: #fffdf9;
+}
+
+.purchase-invoice-entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.purchase-invoice-entry-head > div > span {
+  color: #8a3542;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-invoice-entry-head h2 {
+  margin: 4px 0 0;
+  color: #4b151d;
+  font-size: 20px;
+}
+
+.purchase-invoice-entry-head > svg {
+  color: #6b1f2a;
+}
+
+.purchase-invoice-main-fields {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1fr)
+    minmax(180px, 1fr)
+    minmax(180px, 1fr);
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.purchase-invoice-main-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.purchase-invoice-main-fields > label > input,
+.purchase-invoice-main-fields select {
+  height: 44px;
+  padding: 0 11px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7f1;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.purchase-date-field {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  background: #faf7f1;
+  color: #6b1f2a;
+}
+
+.purchase-date-field input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.purchase-items-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.purchase-items-head span {
+  color: #8a3542;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-items-head h3 {
+  margin: 4px 0 0;
+  color: #4b151d;
+  font-size: 18px;
+}
+
+.purchase-items-head button {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #8a3542,
+      #4b151d
+    );
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-items-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e6dacd;
+  border-radius: 14px;
+}
+
+.purchase-items-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.purchase-items-table thead {
+  background: #f2e6da;
+}
+
+.purchase-items-table th,
+.purchase-items-table td {
+  padding: 11px 12px;
+  text-align: right;
+  border-bottom: 1px solid #eee4d9;
+}
+
+.purchase-items-table th {
+  color: #6b1f2a;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-items-table td {
+  color: #65564f;
+  font-size: 10px;
+}
+
+.purchase-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.purchase-items-table input {
+  width: 100%;
+  min-width: 110px;
+  height: 39px;
+  padding: 0 10px;
+  border: 1px solid #e1d4c7;
+  border-radius: 8px;
+  outline: none;
+  background: #fffdf9;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.purchase-money-input {
+  height: 39px;
+  min-width: 155px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  border: 1px solid #e1d4c7;
+  border-radius: 8px;
+  background: #fffdf9;
+}
+
+.purchase-money-input input {
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-weight: 800;
+}
+
+.purchase-money-input span {
+  flex-shrink: 0;
+  color: #94827a;
+  font-size: 8px;
+}
+
+.purchase-item-total {
+  color: #6b1f2a !important;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.remove-purchase-item {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8e4e2;
+  color: #a33f49;
+}
+
+.remove-purchase-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.purchase-invoice-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.purchase-invoice-total {
+  min-width: 260px;
+  padding: 14px 17px;
+  border: 1px solid #dfcbbb;
+  border-radius: 13px;
+  background:
+    linear-gradient(
+      135deg,
+      #f3e6da,
+      #fcf8f2
+    );
+}
+
+.purchase-invoice-total span {
+  display: block;
+  color: #806e66;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.purchase-invoice-total strong {
+  display: block;
+  margin-top: 5px;
+  color: #4b151d;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.save-purchase-invoice {
+  min-width: 150px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #8a3542,
+      #4b151d
+    );
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.purchase-invoices-record {
+  margin-top: 17px;
+  padding: 22px;
+  border: 1px solid #e5d8ca;
+  border-radius: 20px;
+  background: #fffdf9;
+}
+
+.purchase-record-title span {
+  color: #8a3542;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-record-title h2 {
+  margin: 4px 0 14px;
+  color: #4b151d;
+  font-size: 20px;
+}
+
+.purchase-invoices-empty {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed #d9c8b8;
+  border-radius: 14px;
+  background: #faf7f1;
+  color: #95837a;
+}
+
+.purchase-invoices-empty strong {
+  color: #4b151d;
+  font-size: 11px;
+}
+
+.purchase-record-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e6dacd;
+  border-radius: 14px;
+}
+
+.purchase-record-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+}
+
+.purchase-record-table thead {
+  background: #f2e6da;
+}
+
+.purchase-record-table th,
+.purchase-record-table td {
+  padding: 12px 13px;
+  text-align: right;
+  border-bottom: 1px solid #eee4d9;
+}
+
+.purchase-record-table th {
+  color: #6b1f2a;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.purchase-record-table td {
+  color: #65564f;
+  font-size: 10px;
+}
+
+.purchase-record-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.purchase-payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 27px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.purchase-payment-badge.credit {
+  background: #f6e6cc;
+  color: #8b5b13;
+}
+
+.purchase-payment-badge.cash {
+  background: #e4f1e7;
+  color: #367246;
+}
+
+.purchase-record-total {
+  color: #6b1f2a !important;
+  font-weight: 900;
+}
+
+.delete-purchase-invoice {
+  min-height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8e4e2;
+  color: #a33f49;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .purchase-invoice-main-fields {
+    grid-template-columns:
+      1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .purchase-invoice-main-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-items-head,
+  .purchase-invoice-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .purchase-items-head button,
+  .save-purchase-invoice {
+    width: 100%;
+  }
+
+  .purchase-invoice-total {
+    min-width: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,1334 @@
+.inventory-page {
+  width: 100%;
+  color: #332f2c;
+  font-size: 14px;
+}
+
+.inventory-header {
+  margin-bottom: 17px;
+}
+
+.inventory-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--theme-main);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.inventory-header h1 {
+  margin: 0;
+  color: var(--theme-dark);
+  font-size: 31px;
+  font-weight: 900;
+}
+
+.inventory-header p {
+  margin: 7px 0 0;
+  color: #81756d;
+  font-size: 13px;
+}
+
+/* التبويبات الرئيسية */
+
+.inventory-tabs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 5px;
+  border: 1px solid #dfd4ca;
+  border-radius: 11px;
+  background: #fffdf9;
+}
+
+.inventory-tabs button {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #746960;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.inventory-tabs button.active {
+  background: var(--theme-main);
+  color: #fff;
+}
+
+/* بطاقات المخزون */
+
+.inventory-summary-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.inventory-summary-card {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid #eadfd5;
+  border-radius: 15px;
+  background: #fffdf9;
+  text-align: right;
+}
+
+button.inventory-summary-card {
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.inventory-summary-button.selected {
+  border-color: #d8a658;
+  background: #fff9ed;
+}
+
+.inventory-summary-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--theme-soft);
+  color: var(--theme-main);
+}
+
+.inventory-summary-icon.warning {
+  background: #fff0d3;
+  color: #a76a17;
+}
+
+.inventory-summary-icon.positive {
+  background: #eaf6ef;
+  color: #2e7d4f;
+}
+
+.inventory-summary-icon.negative {
+  background: #fbecec;
+  color: #a13d3d;
+}
+
+.inventory-summary-card small {
+  display: block;
+  color: #81756d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.inventory-summary-card strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+/* لوحة المخزون */
+
+.inventory-panel {
+  border: 1px solid #e7dbd0;
+  border-radius: 17px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.inventory-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee4da;
+}
+
+.inventory-panel-title h2 {
+  margin: 0;
+  color: var(--theme-dark);
+  font-size: 21px;
+}
+
+.inventory-panel-title p {
+  margin: 5px 0 0;
+  color: #84786f;
+  font-size: 11px;
+}
+
+.inventory-stock-tools {
+  display: flex;
+  gap: 8px;
+}
+
+.inventory-search {
+  width: 230px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #dcd0c5;
+  border-radius: 9px;
+  background: #faf7f3;
+}
+
+.inventory-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.inventory-add-item-button {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 9px;
+  background: var(--theme-main);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.inventory-filter-notice {
+  padding: 12px 18px;
+  border-bottom: 1px solid #ead8b8;
+  background: #fff9ed;
+  color: #94611b;
+  font-size: 11px;
+}
+
+.inventory-filter-notice button {
+  float: left;
+  border: none;
+  background: transparent;
+  color: var(--theme-main);
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* الجداول */
+
+.inventory-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.inventory-table,
+.today-withdrawals-table,
+.stock-summary-table,
+.stock-summary-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table {
+  min-width: 930px;
+}
+
+.inventory-table th,
+.today-withdrawals-table th,
+.stock-summary-table th,
+.stock-summary-details-table th {
+  padding: 13px 15px;
+  border-bottom: 1px solid #eae0d7;
+  background: var(--theme-soft-2);
+  color: #70645c;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.inventory-table td,
+.today-withdrawals-table td,
+.stock-summary-table td,
+.stock-summary-details-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #efe7df;
+  color: #514842;
+  font-size: 12px;
+}
+
+.inventory-item-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inventory-item-name > span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--theme-soft);
+  color: var(--theme-main);
+}
+
+.inventory-current-stock {
+  color: var(--theme-dark);
+  font-size: 14px;
+}
+
+.inventory-status {
+  min-height: 29px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.inventory-status.good {
+  background: #eaf6ef;
+  color: #2e7d4f;
+}
+
+.inventory-status.low {
+  background: #fff0d7;
+  color: #9e651d;
+}
+
+.inventory-status.empty {
+  background: #fbecec;
+  color: #a13d3d;
+}
+
+.inventory-row-actions {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.inventory-row-actions button {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.inventory-row-actions .add-quantity {
+  border: 1px solid #b9ddc7;
+  background: #edf8f1;
+  color: #2e7d4f;
+}
+
+.inventory-row-actions .edit {
+  border: 1px solid #c9d5e4;
+  background: var(--theme-soft-2);
+  color: var(--theme-main);
+}
+
+.inventory-row-actions .audit {
+  border: 1px solid #d8cabc;
+  background: #faf6f1;
+  color: #655950;
+}
+
+
+.inventory-row-actions .delete-item {
+  border: 1px solid #e6bcbc;
+  background: #fff1f1;
+  color: #a13d3d;
+}
+
+.inventory-row-actions .delete-item:hover {
+  background: #fbe4e4;
+}
+
+.inventory-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #92867e;
+}
+
+/* السحب اليومي */
+
+.daily-withdrawal-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.daily-withdrawal-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.daily-withdrawal-summary-card {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid #e7dbd0;
+  border-radius: 15px;
+  background: #fffdf9;
+}
+
+.daily-withdrawal-summary-card > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--theme-soft);
+  color: var(--theme-main);
+}
+
+.daily-withdrawal-summary-card > span.withdrawal {
+  background: #fbecec;
+  color: #a13d3d;
+}
+
+.daily-withdrawal-summary-card small {
+  display: block;
+  color: #81756d;
+  font-size: 11px;
+}
+
+.daily-withdrawal-summary-card strong {
+  font-size: 25px;
+}
+
+.daily-withdrawal-panel,
+.today-withdrawals-panel {
+  border: 1px solid #e7dbd0;
+  border-radius: 17px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.daily-withdrawal-header,
+.today-withdrawals-header {
+  padding: 17px 20px;
+  border-bottom: 1px solid #eee4da;
+}
+
+.daily-withdrawal-header h2,
+.today-withdrawals-header h2 {
+  margin: 0;
+  color: var(--theme-dark);
+  font-size: 20px;
+}
+
+.daily-withdrawal-header p,
+.today-withdrawals-header p {
+  margin: 5px 0 0;
+  color: #857970;
+  font-size: 11px;
+}
+
+.daily-withdrawal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 20px;
+}
+
+.daily-withdrawal-fields {
+  display: grid;
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1.1fr;
+  gap: 11px;
+}
+
+.daily-withdrawal-fields label,
+.stock-summary-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #514740;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.daily-withdrawal-fields input,
+.daily-withdrawal-fields select,
+.stock-summary-controls input {
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d8cbc0;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7f3;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.withdrawal-calculation {
+  display: grid;
+  grid-template-columns:
+    1fr 42px
+    1fr 42px
+    1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border: 1px solid #ded5cc;
+  border-radius: 12px;
+  background: #faf8f5;
+}
+
+.withdrawal-calculation > div:not(.withdrawal-symbol) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.withdrawal-calculation small {
+  color: #857970;
+  font-size: 10px;
+}
+
+.withdrawal-calculation strong {
+  color: var(--theme-dark);
+}
+
+.withdrawal-calculation strong.invalid {
+  color: #a13d3d;
+}
+
+.withdrawal-symbol {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 900;
+  color: #91867e;
+}
+
+.withdrawal-warning {
+  padding: 12px;
+  border: 1px solid #e6bcbc;
+  border-radius: 10px;
+  background: #fff0f0;
+  color: #a13d3d;
+}
+
+.daily-withdrawal-save button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 21px;
+  border: none;
+  border-radius: 9px;
+  background: var(--theme-main);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.withdrawal-table-quantity {
+  color: #a13d3d;
+}
+
+.today-withdrawals-empty {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #91857d;
+}
+
+/* =========================
+   ملخص المخزون
+========================= */
+
+.inventory-summary-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stock-summary-panel {
+  border: 1px solid #e7dbd0;
+  border-radius: 17px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.stock-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee4da;
+}
+
+.stock-summary-header h2 {
+  margin: 0;
+  color: var(--theme-dark);
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.stock-summary-header p {
+  margin: 5px 0 0;
+  color: #84786f;
+  font-size: 11px;
+}
+
+.stock-summary-period-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid #ddd2c8;
+  border-radius: 9px;
+  background: #faf7f3;
+}
+
+.stock-summary-period-tabs button {
+  min-width: 70px;
+  height: 37px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #756960;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.stock-summary-period-tabs button.active {
+  background: var(--theme-main);
+  color: #fff;
+}
+
+.stock-summary-controls {
+  display: grid;
+  grid-template-columns:
+    220px
+    220px;
+  justify-content: start;
+  gap: 13px;
+  padding: 17px 20px;
+}
+
+
+.stock-summary-controls select {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d8cbc0;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7f3;
+  color: #514740;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.stock-summary-controls select:focus {
+  border-color: var(--theme-main);
+}
+
+.stock-summary-search > div {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #d8cbc0;
+  border-radius: 10px;
+  background: #faf7f3;
+}
+
+.stock-summary-search > div input {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.stock-summary-cards {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  gap: 13px;
+}
+
+.stock-summary-card {
+  min-height: 83px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 15px;
+  border: 1px solid #e7dbd0;
+  border-radius: 14px;
+  background: #fffdf9;
+}
+
+.stock-summary-card > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.stock-summary-card.additions > span {
+  background: #eaf6ef;
+  color: #2e7d4f;
+}
+
+.stock-summary-card.withdrawals > span {
+  background: #fbecec;
+  color: #a13d3d;
+}
+
+.stock-summary-card.audits > span {
+  background: #fff3db;
+  color: #9c681e;
+}
+
+.stock-summary-card.active-items > span {
+  background: var(--theme-soft);
+  color: var(--theme-main);
+}
+
+.stock-summary-card small {
+  display: block;
+  color: #81756d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.stock-summary-card strong {
+  display: block;
+  margin-top: 3px;
+  color: #302a27;
+  font-size: 23px;
+}
+
+.stock-summary-table-panel,
+.stock-summary-details-panel {
+  border: 1px solid #e7dbd0;
+  border-radius: 17px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.stock-summary-table-heading,
+.stock-summary-details-header {
+  padding: 17px 20px;
+  border-bottom: 1px solid #eee4da;
+}
+
+.stock-summary-table-heading h3,
+.stock-summary-details-header h3 {
+  margin: 0;
+  color: var(--theme-dark);
+  font-size: 18px;
+}
+
+.stock-summary-table-heading p,
+.stock-summary-details-header p {
+  margin: 5px 0 0;
+  color: #857970;
+  font-size: 10px;
+}
+
+.stock-summary-table {
+  min-width: 1050px;
+}
+
+.summary-positive {
+  color: #2e7d4f;
+}
+
+.summary-negative {
+  color: #a13d3d;
+}
+
+.summary-ending-stock {
+  color: var(--theme-main);
+  font-size: 13px;
+}
+
+.summary-details-button {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: var(--theme-soft-2);
+  color: var(--theme-main);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.stock-summary-empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #8f837a;
+}
+
+.stock-summary-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stock-summary-details-header small {
+  color: var(--theme-main);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.stock-summary-details-header > button {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ddd2c8;
+  border-radius: 8px;
+  background: #faf7f3;
+  color: #665c55;
+  cursor: pointer;
+}
+
+.stock-summary-details-table {
+  min-width: 750px;
+}
+
+.summary-movement-type {
+  display: inline-flex;
+  min-height: 27px;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.summary-movement-type.in {
+  background: #eaf6ef;
+  color: #2e7d4f;
+}
+
+.summary-movement-type.out {
+  background: #fbecec;
+  color: #a13d3d;
+}
+
+.summary-movement-type.adjustment {
+  background: #fff3db;
+  color: #95611a;
+}
+
+.stock-summary-details-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #877a72;
+  font-size: 12px;
+}
+
+/* النوافذ */
+
+.inventory-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(35, 29, 25, .43);
+  backdrop-filter: blur(5px);
+}
+
+.inventory-modal {
+  width: min(680px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border: 1px solid #e1d4c8;
+  border-radius: 18px;
+  background: #fffdf9;
+}
+
+.inventory-modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee3d9;
+}
+
+.inventory-modal-header small {
+  color: var(--theme-main);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.inventory-modal-header h2 {
+  margin: 4px 0 0;
+  color: var(--theme-dark);
+}
+
+.inventory-modal-header p {
+  margin: 5px 0 0;
+  color: #80746c;
+  font-size: 11px;
+}
+
+.inventory-modal-header > button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e1d4c8;
+  border-radius: 9px;
+  background: #faf6f1;
+  cursor: pointer;
+}
+
+.inventory-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.inventory-modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.inventory-modal input,
+.inventory-modal select {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d8cbc0;
+  border-radius: 10px;
+  background: #faf7f3;
+  font-family: inherit;
+}
+
+.inventory-first-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 11px;
+}
+
+.inventory-type-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.inventory-type-toggle {
+  height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d8cbc0;
+  border-radius: 10px;
+}
+
+.inventory-type-toggle button {
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.inventory-type-toggle button.active {
+  background: var(--theme-soft);
+  color: var(--theme-main);
+}
+
+.inventory-details-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.inventory-conversion-box {
+  position: relative;
+}
+
+.inventory-conversion-box input {
+  padding-left: 58px;
+}
+
+.inventory-conversion-box small {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--theme-main);
+  font-weight: 900;
+}
+
+.inventory-initial-entry {
+  display: grid;
+  grid-template-columns:
+    1.4fr
+    1fr
+    1.25fr;
+  gap: 11px;
+  align-items: end;
+  padding: 13px;
+  border: 1px solid #cfe4d5;
+  border-radius: 11px;
+  background: #f3faf5;
+}
+
+.inventory-initial-entry-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #2e7d4f;
+}
+
+.inventory-initial-entry-title > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.inventory-initial-entry-title strong {
+  font-size: 12px;
+}
+
+.inventory-initial-entry-title small {
+  color: #718078;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.inventory-low-setting {
+  display: grid;
+  grid-template-columns:
+    1fr
+    110px
+    140px;
+  gap: 9px;
+  align-items: center;
+  padding: 11px 12px;
+  border: 1px solid #ead8b8;
+  border-radius: 10px;
+  background: #fff9ed;
+}
+
+.inventory-low-setting-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #95611a;
+}
+
+.inventory-low-setting-title > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-low-setting-title small {
+  font-size: 10px;
+}
+
+.inventory-modal-actions {
+  display: flex;
+  gap: 9px;
+  padding: 14px 20px;
+  border-top: 1px solid #eee3d9;
+}
+
+.inventory-modal-actions button {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 17px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.inventory-modal-actions .cancel {
+  border: 1px solid #ddd1c6;
+  background: #faf7f3;
+}
+
+.inventory-modal-actions .save {
+  border: none;
+  background: var(--theme-main);
+  color: #fff;
+}
+
+.inventory-quantity-modal {
+  width: min(610px, 100%);
+}
+
+.inventory-quantity-current,
+.inventory-audit-system-value {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 20px 0;
+  padding: 14px;
+  border: 1px solid var(--theme-soft);
+  border-radius: 11px;
+  background: var(--theme-soft-2);
+}
+
+.inventory-quantity-current strong,
+.inventory-audit-system-value strong {
+  color: var(--theme-main);
+}
+
+.inventory-quantity-fields {
+  display: grid;
+  grid-template-columns:
+    1fr
+    1fr
+    1.35fr;
+  gap: 11px;
+}
+
+.inventory-quantity-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #bde0ca;
+  border-radius: 11px;
+  background: #edf8f1;
+  color: #2e7d4f;
+}
+
+.inventory-quantity-preview > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-audit-modal {
+  width: min(560px, 100%);
+}
+
+.inventory-audit-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.inventory-audit-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 11px;
+}
+
+.inventory-audit-result.match {
+  background: #edf8f1;
+  color: #2e7d4f;
+}
+
+.inventory-audit-result.shortage {
+  background: #fff1f1;
+  color: #a13d3d;
+}
+
+.inventory-audit-result.extra {
+  background: #fff8e7;
+  color: #93621f;
+}
+
+@media (max-width: 1000px) {
+  .inventory-summary-grid,
+  .stock-summary-cards {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+  .daily-withdrawal-fields {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+}
+
+@media (max-width: 700px) {
+  .inventory-tabs {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .inventory-tabs button {
+    width: 100%;
+  }
+
+  .inventory-first-row,
+  .inventory-details-row,
+  .inventory-initial-entry,
+  .inventory-audit-fields,
+  .inventory-quantity-fields,
+  .daily-withdrawal-fields,
+  .stock-summary-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-summary-grid,
+  .stock-summary-cards,
+  .daily-withdrawal-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-summary-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .stock-summary-period-tabs button {
+    flex: 1;
+  }
+
+  .withdrawal-calculation {
+    grid-template-columns: 1fr;
+  }
+
+  .withdrawal-symbol {
+    display: none;
+  }
+
+  .inventory-low-setting {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* وضوح القوائم والجداول */
+
+.stock-summary-controls select {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #332925 !important;
+}
+
+.stock-summary-controls select option {
+  font-size: 14px;
+  font-weight: 700;
+  color: #332925;
+}
+
+.stock-summary-table th,
+.stock-summary-details-table th,
+.display-simple-table th,
+.daily-quick-table th {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.stock-summary-table td,
+.stock-summary-details-table td,
+.display-simple-table td,
+.daily-quick-table td {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #332b27 !important;
+}
+
+.display-simple-badge {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* اختيار المنتج: خانة واحدة فقط */
+
+.inventory-single-product-picker {
+  width: 100%;
+}
+
+.inventory-single-product-picker input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid #d8cdc5;
+  border-radius: 9px;
+  background: #fff;
+  color: #332b27;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  outline: none;
+}
+
+.inventory-single-product-picker input:focus {
+  border-color: var(--theme-main);
+  box-shadow:
+    0 0 0 3px var(--theme-soft);
+}
+
+.inventory-single-product-picker input::placeholder {
+  color: #958982;
+  font-weight: 500;
+}

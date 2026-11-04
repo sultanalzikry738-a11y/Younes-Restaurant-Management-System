@@ -1,0 +1,301 @@
+.credit-payments-page {
+  width: 100%;
+  direction: rtl;
+}
+
+.credit-payment-entry {
+  padding: 22px;
+  border: 1px solid #e5d8ca;
+  border-radius: 20px;
+  background: #fffdf9;
+}
+
+.credit-payment-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.credit-payment-head > div > span {
+  color: #8a3542;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.credit-payment-head h2 {
+  margin: 4px 0;
+  color: #4b151d;
+  font-size: 20px;
+}
+
+.credit-payment-head p {
+  margin: 0;
+  color: #88766e;
+  font-size: 10px;
+}
+
+.credit-payment-head > svg {
+  color: #6b1f2a;
+}
+
+.credit-invoice-selector {
+  margin-bottom: 17px;
+}
+
+.credit-invoice-selector label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 300px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.credit-invoice-selector select {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7f1;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.credit-payment-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.credit-payment-summary > div {
+  padding: 15px;
+  border: 1px solid #e4d7ca;
+  border-radius: 13px;
+  background: #faf7f1;
+}
+
+.credit-payment-summary span {
+  display: block;
+  color: #84736c;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.credit-payment-summary strong {
+  display: block;
+  margin-top: 5px;
+  color: #4b151d;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.credit-remaining-card {
+  background:
+    linear-gradient(
+      135deg,
+      #f4e5da,
+      #fffaf5
+    ) !important;
+  border-color: #d9c0ad !important;
+}
+
+.credit-remaining-card strong {
+  color: #6b1f2a;
+}
+
+.credit-payment-form {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1fr)
+    minmax(180px, 1fr)
+    auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.credit-payment-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.credit-money-field,
+.credit-date-field {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  background: #faf7f1;
+}
+
+.credit-money-field input,
+.credit-date-field input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.credit-money-field input {
+  text-align: center;
+  font-weight: 900;
+}
+
+.credit-money-field span {
+  flex-shrink: 0;
+  color: #8f7d74;
+  font-size: 9px;
+}
+
+.credit-date-field {
+  color: #6b1f2a;
+}
+
+.save-credit-payment {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #8a3542,
+      #4b151d
+    );
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.save-credit-payment:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.credit-payments-record {
+  margin-top: 17px;
+  padding: 22px;
+  border: 1px solid #e5d8ca;
+  border-radius: 20px;
+  background: #fffdf9;
+}
+
+.credit-record-title span {
+  color: #8a3542;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.credit-record-title h2 {
+  margin: 4px 0 14px;
+  color: #4b151d;
+  font-size: 20px;
+}
+
+.credit-payments-empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed #d9c8b8;
+  border-radius: 14px;
+  background: #faf7f1;
+  color: #95837a;
+}
+
+.credit-payments-empty strong {
+  color: #4b151d;
+  font-size: 11px;
+}
+
+.credit-record-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e6dacd;
+  border-radius: 14px;
+}
+
+.credit-record-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+.credit-record-table thead {
+  background: #f2e6da;
+}
+
+.credit-record-table th,
+.credit-record-table td {
+  padding: 12px 13px;
+  text-align: right;
+  border-bottom: 1px solid #eee4d9;
+}
+
+.credit-record-table th {
+  color: #6b1f2a;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.credit-record-table td {
+  color: #65564f;
+  font-size: 10px;
+}
+
+.credit-record-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.credit-payment-amount {
+  color: #6b1f2a !important;
+  font-weight: 900;
+}
+
+.delete-credit-payment {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8e4e2;
+  color: #a33f49;
+}
+
+@media (max-width: 800px) {
+  .credit-payment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .credit-payment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .save-credit-payment {
+    width: 100%;
+  }
+}

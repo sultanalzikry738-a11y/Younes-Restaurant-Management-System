@@ -1,0 +1,990 @@
+.workers-page {
+  width: 100%;
+}
+
+.workers-header {
+  margin-bottom: 24px;
+}
+
+.workers-eyebrow {
+  color: #8a3542;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.workers-header h1 {
+  margin: 5px 0 0;
+  color: #4b151d;
+  font-size: 31px;
+  font-weight: 900;
+}
+
+.workers-panel {
+  padding: 22px;
+  border: 1px solid #e7dac9;
+  border-radius: 21px;
+  background: #fffdf9;
+  box-shadow:
+    0 10px 30px
+    rgba(75, 21, 29, 0.05);
+}
+
+/* بطاقة ملخص العمال */
+
+.workers-summary-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding: 19px 21px;
+  border: 1px solid #d8b9ae;
+  border-radius: 17px;
+  cursor: pointer;
+  text-align: right;
+  background:
+    linear-gradient(
+      135deg,
+      #f5e7dc,
+      #faf6ef
+    );
+  font-family: inherit;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.workers-summary-banner:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 24px
+    rgba(75, 21, 29, 0.08);
+}
+
+.workers-summary-banner-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #6b1f2a;
+  color: #fff;
+}
+
+.workers-summary-banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.workers-summary-banner-text strong {
+  color: #4b151d;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.workers-summary-banner-text span {
+  color: #846e66;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.workers-summary-banner-action {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  background: #fff;
+  color: #6b1f2a;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* شاشة ملخص العمال */
+
+.workers-summary-page {
+  padding-top: 2px;
+}
+
+.workers-summary-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.workers-summary-header > div:first-child > span {
+  color: #8a3542;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.workers-summary-header h2 {
+  margin: 4px 0 0;
+  color: #4b151d;
+  font-size: 24px;
+}
+
+.workers-summary-header p {
+  margin: 6px 0 0;
+  color: #8b7b73;
+  font-size: 10px;
+}
+
+.workers-summary-header-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 11px;
+}
+
+.workers-summary-header-actions label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.workers-summary-header-actions input {
+  height: 42px;
+  min-width: 180px;
+  padding: 0 11px;
+  border: 1px solid #dfd1c1;
+  border-radius: 9px;
+  outline: none;
+  background: #faf7f1;
+  color: #493a35;
+  font-family: inherit;
+}
+
+.workers-summary-header-actions button {
+  height: 42px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #6b1f2a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.workers-summary-empty {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed #ddcbbb;
+  border-radius: 15px;
+  background: #faf7f1;
+  color: #4b151d;
+}
+
+.workers-summary-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e7dac9;
+  border-radius: 15px;
+}
+
+.workers-summary-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+}
+
+.workers-summary-table thead {
+  background: #f3e8dd;
+}
+
+.workers-summary-table th,
+.workers-summary-table td {
+  padding: 14px 13px;
+  text-align: right;
+  border-bottom: 1px solid #eee5da;
+}
+
+.workers-summary-table th {
+  color: #6b1f2a;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.workers-summary-table td {
+  color: #65564f;
+  font-size: 10px;
+}
+
+.workers-summary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.summary-worker-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.summary-worker-avatar {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #f3e8dd;
+  color: #6b1f2a;
+}
+
+.summary-worker-name strong {
+  color: #4b151d;
+  font-size: 11px;
+}
+
+.summary-remaining {
+  color: #6b1f2a !important;
+  font-weight: 900;
+}
+
+/* التبويبات */
+
+.workers-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom:
+    1px solid #eee4d7;
+}
+
+.workers-tab {
+  min-width: 145px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border: 1px solid #eadfd2;
+  border-radius: 11px;
+  cursor: pointer;
+  background: #f8f2ea;
+  color: #74655f;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.workers-tab.active {
+  border-color: #6b1f2a;
+  background: #6b1f2a;
+  color: #fff;
+}
+
+/* العمال */
+
+.workers-section-header,
+.statement-header,
+.expenses-header,
+.salary-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 25px 0 18px;
+}
+
+.workers-section-header span,
+.statement-header > div:first-child > span,
+.expenses-header > div > span,
+.salary-header > div:first-child > span {
+  color: #8a3542;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.workers-section-header h2,
+.statement-header h2,
+.expenses-header h2,
+.salary-header h2 {
+  margin: 4px 0 0;
+  color: #4b151d;
+  font-size: 22px;
+}
+
+.expenses-header p {
+  margin: 6px 0 0;
+  color: #8d7d75;
+  font-size: 10px;
+}
+
+.add-worker-button {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background:
+    linear-gradient(
+      135deg,
+      #8a3542,
+      #4b151d
+    );
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.workers-empty,
+.statement-empty,
+.salary-empty,
+.expenses-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed #ddcbbb;
+  border-radius: 15px;
+  background: #faf7f1;
+  color: #8c7d75;
+}
+
+.workers-empty-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #f1e3d6;
+  color: #6b1f2a;
+}
+
+.workers-empty h3,
+.salary-empty strong,
+.expenses-empty strong {
+  color: #4b151d;
+}
+
+.workers-empty button {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #6b1f2a;
+  color: #fff;
+  font-family: inherit;
+}
+
+.workers-table-wrapper,
+.statement-table-wrapper,
+.expenses-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e8dccf;
+  border-radius: 14px;
+}
+
+.workers-table,
+.statement-table,
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.workers-table {
+  min-width: 650px;
+}
+
+.statement-table {
+  min-width: 800px;
+}
+
+.expenses-table {
+  min-width: 750px;
+}
+
+.workers-table thead,
+.statement-table thead,
+.expenses-table thead {
+  background: #f5ede3;
+}
+
+.workers-table th,
+.workers-table td,
+.statement-table th,
+.statement-table td,
+.expenses-table th,
+.expenses-table td {
+  padding: 13px 15px;
+  text-align: right;
+  border-bottom:
+    1px solid #eee5da;
+}
+
+.workers-table th,
+.statement-table th,
+.expenses-table th {
+  color: #6b1f2a;
+  font-size: 10px;
+}
+
+.worker-number {
+  width: 65px;
+  color: #9a8981;
+}
+
+.worker-name,
+.expense-worker-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.worker-avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #f3e8dd;
+  color: #6b1f2a;
+}
+
+.worker-name strong,
+.expense-worker-name strong {
+  color: #4b151d;
+}
+
+.worker-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.worker-actions button {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.worker-edit {
+  background: #f3e8dd;
+  color: #6b1f2a;
+}
+
+.worker-delete {
+  background: #fae5e3;
+  color: #a33e49;
+}
+
+/* كشف العامل */
+
+.worker-statement,
+.workers-expenses,
+.salary-page {
+  padding-top: 5px;
+}
+
+.statement-selectors,
+.salary-selectors {
+  display: flex;
+  gap: 12px;
+}
+
+.statement-selectors label,
+.salary-selectors label,
+.expenses-date {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.statement-selectors select,
+.statement-selectors input,
+.salary-selectors select,
+.salary-selectors input,
+.expenses-date input {
+  min-width: 180px;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid #dfd1c1;
+  border-radius: 9px;
+  outline: none;
+  background: #faf7f1;
+  color: #493a35;
+  font-family: inherit;
+}
+
+.selected-worker-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 11px;
+  background: #f3e8dd;
+  color: #6b1f2a;
+}
+
+.statement-day {
+  width: 80px;
+  color: #4b151d;
+  font-weight: 900;
+}
+
+.statement-money-input,
+.salary-money-input {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #dfd1c1;
+  border-radius: 8px;
+  background: #faf7f1;
+}
+
+.statement-money-input input,
+.salary-money-input input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.statement-money-input span,
+.salary-money-input span {
+  flex-shrink: 0;
+  padding: 0 9px;
+  color: #8c7d75;
+  font-size: 8px;
+}
+
+.absence-select {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #dfd1c1;
+  border-radius: 8px;
+  outline: none;
+  background: #faf7f1;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.statement-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.statement-footer button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #6b1f2a;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+/* مصاريف العمال */
+
+.expense-row-total {
+  color: #6b1f2a;
+  font-weight: 900;
+}
+
+.expenses-total-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 17px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #f3e8dd;
+}
+
+.expenses-total-box span {
+  color: #837169;
+  font-size: 10px;
+}
+
+.expenses-total-box strong {
+  color: #4b151d;
+  font-size: 21px;
+}
+
+/* الراتب */
+
+.absence-settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid #e4d5c4;
+  border-radius: 15px;
+  background: #f5ecdf;
+}
+
+.absence-settings > div:first-child > span {
+  color: #8a3542;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.absence-settings h2 {
+  margin: 4px 0 0;
+  color: #4b151d;
+  font-size: 17px;
+}
+
+.absence-settings-fields {
+  display: flex;
+  gap: 13px;
+}
+
+.absence-settings-fields label {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #62534d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.salary-entry {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid #e7dac9;
+  border-radius: 14px;
+  background: #faf7f1;
+}
+
+.salary-entry > label {
+  width: min(350px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #5f504a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.salary-main-input {
+  height: 45px;
+}
+
+.salary-entry > button {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #6b1f2a;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.salary-summary-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.salary-summary-card {
+  padding: 16px;
+  border: 1px solid #e7dac9;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.salary-summary-card span {
+  display: block;
+  color: #8c7d75;
+  font-size: 9px;
+}
+
+.salary-summary-card strong {
+  display: block;
+  margin-top: 6px;
+  color: #4b151d;
+  font-size: 16px;
+}
+
+.absence-summary {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.absence-summary > div {
+  padding: 14px;
+  border-radius: 12px;
+  background: #faf7f1;
+  border: 1px solid #eadfd2;
+}
+
+.absence-summary span {
+  display: block;
+  color: #8b7b73;
+  font-size: 9px;
+}
+
+.absence-summary strong {
+  display: block;
+  margin-top: 5px;
+  color: #6b1f2a;
+  font-size: 14px;
+}
+
+.salary-final {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid #e4d5c4;
+  border-radius: 14px;
+}
+
+.salary-final-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee4d7;
+  background: #fffdf9;
+}
+
+.salary-final-row:last-child {
+  border-bottom: none;
+}
+
+.salary-final-row span {
+  color: #786861;
+  font-size: 10px;
+}
+
+.salary-final-row strong {
+  color: #4b151d;
+  font-size: 13px;
+}
+
+.salary-remaining {
+  background: #f3e8dd;
+}
+
+.salary-remaining span,
+.salary-remaining strong {
+  color: #6b1f2a;
+  font-weight: 900;
+}
+
+.salary-remaining strong {
+  font-size: 22px;
+}
+
+/* نافذة العامل */
+
+.worker-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background:
+    rgba(45, 24, 26, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.worker-modal {
+  width: min(420px, 95vw);
+  padding: 25px;
+  border-radius: 20px;
+  background: #fffdf9;
+}
+
+.worker-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom:
+    1px solid #eee4d7;
+}
+
+.worker-modal-header span {
+  color: #8a3542;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.worker-modal-header h2 {
+  margin: 4px 0 0;
+  color: #4b151d;
+}
+
+.worker-modal-header > button {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #f5eee5;
+}
+
+.worker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.worker-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #5f504a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.worker-form input {
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7f1;
+  font-family: inherit;
+}
+
+.save-worker-button {
+  min-height: 46px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #6b1f2a;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .salary-summary-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .absence-settings {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .absence-settings-fields {
+    flex-direction: column;
+  }
+
+  .absence-settings-fields label {
+    width: 100%;
+  }
+
+  .workers-summary-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workers-summary-header-actions {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 750px) {
+  .workers-section-header,
+  .statement-header,
+  .expenses-header,
+  .salary-header,
+  .salary-entry,
+  .expenses-total-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statement-selectors,
+  .salary-selectors,
+  .workers-summary-header-actions {
+    flex-direction: column;
+  }
+
+  .statement-selectors select,
+  .statement-selectors input,
+  .salary-selectors select,
+  .salary-selectors input,
+  .expenses-date input,
+  .workers-summary-header-actions input {
+    width: 100%;
+  }
+
+  .salary-summary-grid,
+  .absence-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .workers-tab {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .workers-summary-banner {
+    align-items: flex-start;
+  }
+
+  .workers-summary-banner-action {
+    display: none;
+  }
+}

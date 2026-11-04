@@ -1,0 +1,258 @@
+.expenses-summary-page {
+  width: 100%;
+  direction: rtl;
+}
+
+.expenses-summary-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 27px 30px;
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #8a3542,
+      #4b151d
+    );
+  box-shadow:
+    0 12px 28px
+    rgba(
+      75,
+      21,
+      29,
+      0.16
+    );
+}
+
+.expenses-summary-hero::after {
+  content: '';
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  left: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+}
+
+.expenses-summary-hero > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.expenses-summary-hero span {
+  color: #f3cbd1;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.expenses-summary-hero h1 {
+  margin: 5px 0 4px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.expenses-summary-hero p {
+  max-width: 460px;
+  margin: 0;
+  color: #f3e4dc;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.expenses-summary-hero-icon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+  color: #ffffff;
+}
+
+.expenses-summary-filter {
+  margin-top: 17px;
+  padding: 18px 20px;
+  border: 1px solid #e5d8ca;
+  border-radius: 18px;
+  background: #fffdf9;
+}
+
+.expenses-summary-filter > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 220px;
+}
+
+.expenses-summary-filter span {
+  color: #62534d;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.expenses-summary-month {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid #dfd1c1;
+  border-radius: 10px;
+  background: #faf7f1;
+  color: #6b1f2a;
+}
+
+.expenses-summary-month input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #4b151d;
+  font-family: inherit;
+}
+
+.expenses-summary-cards {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 14px;
+  margin-top: 17px;
+}
+
+.expense-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 110px;
+  padding: 18px;
+  border: 1px solid #e6d8ca;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow:
+    0 7px 18px
+    rgba(
+      75,
+      21,
+      29,
+      0.04
+    );
+}
+
+.expense-summary-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f2e4d7;
+  color: #6b1f2a;
+}
+
+.expense-summary-card span {
+  display: block;
+  color: #87756d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.expense-summary-card strong {
+  display: block;
+  margin-top: 6px;
+  color: #4b151d;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.expenses-summary-total {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 24px 26px;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      135deg,
+      #f1e3d6,
+      #fbf7f1
+    );
+  border: 1px solid #dfcbbb;
+}
+
+.expenses-summary-total span {
+  display: block;
+  color: #6b1f2a;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.expenses-summary-total p {
+  margin: 5px 0 0;
+  color: #8a7870;
+  font-size: 9px;
+}
+
+.expenses-summary-total > strong {
+  color: #4b151d;
+  font-size: 30px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+@media (
+  max-width: 850px
+) {
+  .expenses-summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (
+  max-width: 650px
+) {
+  .expenses-summary-hero,
+  .expenses-summary-total {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .expenses-summary-hero-icon {
+    display: none;
+  }
+
+  .expenses-summary-filter > div {
+    width: 100%;
+  }
+
+  .expenses-summary-total > strong {
+    font-size: 24px;
+  }
+}
